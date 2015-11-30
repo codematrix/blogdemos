@@ -1,0 +1,26 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5000/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "environmentVariables": {
+        "Key": "Value",
+        "ASPNET_ENV": "Development",
+        "MyEnv1": "Env1Value"
+      }      
+    },
+    "web": {
+      "commandName": "web",
+      "environmentVariables": {
+        "Hosting:Environment": "Development"
+      }
+    }
+  }
+}

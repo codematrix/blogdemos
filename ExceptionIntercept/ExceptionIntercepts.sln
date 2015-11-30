@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{84BEAD1C-81CC-4214-A20A-AC4D363973E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A8097A36-5DB4-40F5-AF48-86B5F4A0536B}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ExceptionIntercepts", "src\ExceptionIntercepts\ExceptionIntercepts.xproj", "{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Microsoft.AspNet.Diagnostics.ExceptionIntercepts", "src\Microsoft.AspNet.Diagnostics.ExceptionIntercepts\Microsoft.AspNet.Diagnostics.ExceptionIntercepts.xproj", "{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FF1DF628-BC29-4DED-A0E3-E5A7FB14BC32} = {84BEAD1C-81CC-4214-A20A-AC4D363973E6}
+		{DD57FEC7-65B7-4455-9D03-2A8C80C89C3A} = {84BEAD1C-81CC-4214-A20A-AC4D363973E6}
+	EndGlobalSection
+EndGlobal
