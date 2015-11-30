@@ -18,7 +18,7 @@ namespace ExceptionIntercepts
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddExceptionIntercepts();  
+            services.AddExceptionIntercepts();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
