@@ -9,7 +9,7 @@ namespace ExceptionIntercepts.BasicSamples
 {
     public class SimpleExceptionFinalizer : IExceptionHandler
     {
-        public async Task HandleAsync(ExceptionContext context)
+        public async Task HandleAsync(ExceptionContext context) 
         {
             // sample response
             var response = new
