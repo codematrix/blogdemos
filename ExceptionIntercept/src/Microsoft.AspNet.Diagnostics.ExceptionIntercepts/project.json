@@ -1,10 +1,10 @@
 {
   "version": "1.0.0-*",
-  "description": "Microsoft.AspNet.Diagnostics.ExceptionIntercepts Class Library",
-  "authors": [ "Ross" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "description": "ASP.NET 5 Handling exception intercepts.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/codematrix/blogdemos"
+  },
   "frameworks": {
     "net451": { },
     "dotnet5.4": {
