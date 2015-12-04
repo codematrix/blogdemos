@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using ExceptionIntercepts.CustomExceptions;
+using Microsoft.AspNet.Mvc;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
-using ExceptionIntercepts.CustomExceptions;
 
 namespace ExceptionIntercepts.Controllers
 {
