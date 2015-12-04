@@ -13,6 +13,7 @@ namespace ExceptionIntercepts
 
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
+
         }
 
         public void ConfigureServices(IServiceCollection services)
