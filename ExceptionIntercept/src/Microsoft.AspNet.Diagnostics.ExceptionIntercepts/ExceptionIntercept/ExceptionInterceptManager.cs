@@ -38,29 +38,27 @@ namespace Microsoft.AspNet.Diagnostics.ExceptionIntercepts
             var feature = context.Features.Get<IExceptionHandlerFeature>();
             var exceptionContext = new ExceptionContext(context, feature?.Error);
             var handlerExecutionExceptions = new List<Exception>();
-            var exceptionIntercepts = new List<IExceptionHandler>();
 
-            lock(_exceptionIntercepts)
+            try
             {
-                // make a shallow copy
-                exceptionIntercepts.AddRange(_exceptionIntercepts);
-            }
-
-            foreach (var handlers in exceptionIntercepts)
-            {
-                try
+                foreach (var handlers in _exceptionIntercepts)
                 {
-                    await handlers.HandleAsync(exceptionContext);
-                }
-                catch (Exception ex)
-                {
-                    handlerExecutionExceptions.Add(ex);
+                    try
+                    {
+                        await handlers.HandleAsync(exceptionContext);
+                    }
+                    catch (Exception ex)
+                    {
+                        handlerExecutionExceptions.Add(ex);
+                    }
                 }
             }
-
-            if(handlerExecutionExceptions.Any())
+            finally
             {
-                throw new AggregateException(handlerExecutionExceptions);
+                if (handlerExecutionExceptions.Any())
+                {
+                    throw new AggregateException(handlerExecutionExceptions);
+                }
             }
         }
 
@@ -70,10 +68,7 @@ namespace Microsoft.AspNet.Diagnostics.ExceptionIntercepts
         /// <param name="exceptionIntercept">The exception intercept.</param>
         void IExceptionInterceptManager.AddExceptionIntercept(IExceptionHandler exceptionIntercept)
         {
-            lock (_exceptionIntercepts)
-            {
-                _exceptionIntercepts.Add(exceptionIntercept);
-            }
+            _exceptionIntercepts.Add(exceptionIntercept);
         }
     }
 }
