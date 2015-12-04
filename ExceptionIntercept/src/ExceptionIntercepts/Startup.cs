@@ -18,14 +18,14 @@ namespace ExceptionIntercepts
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(); 
+            services.AddMvc();
             services.AddExceptionIntercepts();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             // NOTE: the order of configuration is important as Middlewares are based on 
-            // a sequential Pipeline workflow.
+            // a sequential Pipeline workflow.  
 
             // *** Simple examples - the order of addition is important as each interceptor is executed in sequence.
             //app.UseExceptionIntercepts();
