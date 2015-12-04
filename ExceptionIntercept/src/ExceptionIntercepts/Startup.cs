@@ -10,7 +10,6 @@ namespace ExceptionIntercepts
 {
     public class Startup
     {
-
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
 
@@ -24,7 +23,7 @@ namespace ExceptionIntercepts
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            // NOTE: the order of configuration is important as Middlewares are based on 
+            // NOTE: the order of configuration is important as Middlewares are based on
             // a sequential Pipeline workflow.  
 
             // *** Simple examples - the order of addition is important as each interceptor is executed in sequence.
