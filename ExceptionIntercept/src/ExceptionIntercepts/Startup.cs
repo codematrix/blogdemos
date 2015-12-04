@@ -36,7 +36,7 @@ namespace ExceptionIntercepts
 
             // *** Realistic examples - the order of addition is important as each interceptor is executed in sequence.
             app.UseExceptionIntercepts();
-            app.AddExceptionIntercept(new ExceptionInspector(new ExceptionCategorizer()));
+            app.AddExceptionIntercept(new ExceptionInitializer(new ExceptionCategorizer()));
             app.AddExceptionIntercept(new ExceptionJIRALogger());
             app.AddExceptionIntercept(new ExceptionDbLogger());
             app.AddExceptionIntercept(new ExceptionFinalizer());

@@ -53,6 +53,10 @@ namespace Microsoft.AspNet.Diagnostics.ExceptionIntercepts
                     }
                 }
             }
+            catch(Exception ex)
+            {
+                handlerExecutionExceptions.Add(ex);
+            }
             finally
             {
                 if (handlerExecutionExceptions.Any())

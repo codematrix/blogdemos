@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ExceptionIntercepts.RealisticSamples
 {
-    public class ExceptionInspector : IExceptionHandler
+    public class ExceptionInitializer : IExceptionHandler
     {
         private readonly ExceptionCategorizer _exceptionCategorizer;
 
-        public ExceptionInspector(ExceptionCategorizer exceptionCategorizer)
+        public ExceptionInitializer(ExceptionCategorizer exceptionCategorizer)
         {
             _exceptionCategorizer = exceptionCategorizer;
         }
