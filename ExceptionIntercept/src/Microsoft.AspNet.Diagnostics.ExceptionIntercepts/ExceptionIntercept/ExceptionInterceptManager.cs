@@ -11,8 +11,8 @@ using System.Threading.Tasks;
 namespace Microsoft.AspNet.Diagnostics.ExceptionIntercepts
 {
     /// <summary>
-    /// The Exception Intercept Manager that delegates unhandled exceptions to 
-    /// an Exception Handler if defined and zero or more Exception Loggers.
+    /// The Exception Intercept Manager that delegates an unhandled exception to 
+    /// defined ExceptionHandlers in sequence, if any.
     /// </summary>
     /// <seealso cref="Microsoft.AspNet.Diagnostics.IExceptionInterceptManager" />
     public class ExceptionInterceptManager : IExceptionInterceptManager
